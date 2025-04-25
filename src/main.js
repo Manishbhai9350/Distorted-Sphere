@@ -185,6 +185,8 @@ function Resize(){
     renderer.setSize(window.innerWidth, window.innerHeight);
     if(innerWidth < 600) {
       uniforms2.size.value = 1.4
+    } else {
+      uniforms2.size.value = 1
     }
 }
 
