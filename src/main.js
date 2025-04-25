@@ -159,13 +159,13 @@ document.querySelector('.magin-button').addEventListener('click',e => {
 })
 
 document.querySelector('.code-button').addEventListener('mouseenter',e => {
-  gsap.to(uniforms.uScrollProg,{
+  gsap.to(uniforms2.uScrollProg,{
     value:1,
     duration:1.6
   })
 })
 document.querySelector('.code-button').addEventListener('mouseleave',e => {
-  gsap.to(uniforms.uScrollProg,{
+  gsap.to(uniforms2.uScrollProg,{
     value:0,
     duration:1.6
   })
@@ -175,7 +175,7 @@ const Clock = new THREE.Clock()
 
 // Animation loop
 function animate() {
-  uniforms.uTime.value = Clock.getElapsedTime()
+  // uniforms.uTime.value = Clock.getElapsedTime()
   uniforms2.time.value = Clock.getElapsedTime() * .3
   Controls.update()
   renderer.render(scene, camera);
