@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body {
+  width:100%;
+  background: #fff;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  width: 100vw;
+  height: auto;
+  canvas {
+    height: 100svh;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  section {
+    height: 100svh;
+    width: 100vw;
+    z-index: 2;
+    position: relative;
+  }
+
+  .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .4rem;
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 200;
+      text-align: center;
+    }
+    button {
+      width: 100px;
+      height: 40px;
+      background: transparent;
+      border: 1px solid black;
+      outline: none;
+      border-radius: 50px;
+      margin-bottom: 20svh;
+      font-size: 1.4rem;
+      opacity: .7;
+      transition: all .3s  ease-in ;
+      cursor: pointer;
+      &:hover {
+        background: black;
+        opacity: 1;
+        a {
+          color:white;
+        }
+      }
+    }
+  }
+  .page3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    gap: .4rem;
+    height: fit-content!important;
+    padding-block: 5svh;
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center;
+    }
+    button {
+      width: 100px;
+      height: 40px;
+      background: transparent;
+      border: 1px solid black;
+      outline: none;
+      border-radius: 50px;
+      margin-bottom: 10svh;
+      font-size: 1.4rem;
+      opacity: .7;
+      transition: all .3s  ease-in ;
+      cursor: pointer;
+      &:hover {
+        background: black;
+        color:white;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+@media (min-width:900px) {
+  section.hero {
+    h1 {
+      font-size: 5rem;
+    }
+    button {
+      width: 150px;
+      height: 50px;
+      border-radius: 5px;
+    }
+  }
+  section.page3 {
+    h1 {
+      font-size: 3rem;
+    }
+    button {
+      width: 150px;
+      height: 50px;
+      border-radius: 5px;
+    }
+  }
+}
