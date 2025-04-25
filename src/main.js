@@ -5,7 +5,6 @@ import devebFrag from './shaders/deveb.frag.glsl'
 import vertexShader from './shaders/vertex.glsl';
 import fragmentShader from './shaders/fragment.glsl';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
-import GUI from 'three/examples/jsm/libs/lil-gui.module.min.js';
 import gsap from 'gsap'
 import Lenis from 'lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -39,8 +38,6 @@ Controls.dampingFactor = .1
 const renderer = new THREE.WebGLRenderer({canvas:Canvas,antialias:true,alpha:true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(Math.min(devicePixelRatio,2))
-
-const Gui = new GUI()
 
 const uniforms = {
   uPI:{value:Math.PI},
@@ -87,20 +84,20 @@ const uniforms2 = {
   fragment:{value:false},
 }
 
-Gui.add(uniforms2.displace,'value').min(0).max(3).step(.001).name('Displace')
-Gui.add(uniforms2.pointscale,'value').min(0).max(3).step(.001).name('Point Scale')
-Gui.add(uniforms2.decay,'value').min(0).max(3).step(.001).name('Decay')
-Gui.add(uniforms2.size,'value').min(0).max(3).step(.001).name('Size')
-Gui.add(uniforms2.complex,'value').min(0).max(3).step(.001).name('Complex')
-Gui.add(uniforms2.waves,'value').min(0).max(3).step(.001).name('Waves')
-Gui.add(uniforms2.eqcolor,'value').min(0).max(3).step(.001).name('EQ Color')
-Gui.add(uniforms2.rcolor,'value').min(0).max(3).step(.001).name('r Color')
-Gui.add(uniforms2.gcolor,'value').min(0).max(3).step(.001).name('g Color')
-Gui.add(uniforms2.bcolor,'value').min(0).max(3).step(.001).name('b Color')
-Gui.add(uniforms2.bcolor,'value').min(0).max(3).step(.001).name('b Color')
-Gui.add(uniforms2.uScrollProg,'value').min(0).max(1).step(.001).name('Scroll Prog')
-Gui.add(uniforms2.fragment,'value').name('Fragment')
-Gui.hide()
+// Gui.add(uniforms2.displace,'value').min(0).max(3).step(.001).name('Displace')
+// Gui.add(uniforms2.pointscale,'value').min(0).max(3).step(.001).name('Point Scale')
+// Gui.add(uniforms2.decay,'value').min(0).max(3).step(.001).name('Decay')
+// Gui.add(uniforms2.size,'value').min(0).max(3).step(.001).name('Size')
+// Gui.add(uniforms2.complex,'value').min(0).max(3).step(.001).name('Complex')
+// Gui.add(uniforms2.waves,'value').min(0).max(3).step(.001).name('Waves')
+// Gui.add(uniforms2.eqcolor,'value').min(0).max(3).step(.001).name('EQ Color')
+// Gui.add(uniforms2.rcolor,'value').min(0).max(3).step(.001).name('r Color')
+// Gui.add(uniforms2.gcolor,'value').min(0).max(3).step(.001).name('g Color')
+// Gui.add(uniforms2.bcolor,'value').min(0).max(3).step(.001).name('b Color')
+// Gui.add(uniforms2.bcolor,'value').min(0).max(3).step(.001).name('b Color')
+// Gui.add(uniforms2.uScrollProg,'value').min(0).max(1).step(.001).name('Scroll Prog')
+// Gui.add(uniforms2.fragment,'value').name('Fragment')
+// Gui.hide()
 
 
 
